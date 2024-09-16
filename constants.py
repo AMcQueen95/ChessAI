@@ -1,7 +1,5 @@
-# constants.py
-
-WIDTH = HEIGHT = 512  # Chessboard dimensions
-DIMENSION = 8         # 8x8 chessboard
+WIDTH = HEIGHT = 512
+DIMENSION = 8
 SQ_SIZE = HEIGHT // DIMENSION
-MAX_FPS = 15          # For animations
+MAX_FPS = 15
 IMAGES = {}

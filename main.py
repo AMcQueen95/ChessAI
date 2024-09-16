@@ -1,5 +1,3 @@
-# main.py
-
 import pygame as p
 from constants import WIDTH, HEIGHT, MAX_FPS
 from chess_engine import GameState, Move
@@ -20,8 +18,8 @@ def main():
     sq_selected = ()
     player_clicks = []
     game_over = False
-    player_one = True  # Set to False if AI plays white
-    player_two = False  # Set to False if AI plays black
+    player_one = True 
+    player_two = False
 
     while running:
         is_human_turn = (gs.white_to_move and player_one) or (not gs.white_to_move and player_two)
@@ -64,7 +62,6 @@ def main():
                     animate = False
                     game_over = False
 
-        # AI move
         if not game_over and not is_human_turn:
             ai_move = find_best_move(gs, valid_moves)
             if ai_move is None:
@@ -96,7 +93,6 @@ def main():
         p.display.flip()
 
 def animate_move(move, screen, board, clock):
-    # Implement move animation if desired
     pass
 
 def draw_endgame_text(screen, text):

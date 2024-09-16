@@ -1,5 +1,3 @@
-# chess_gui.py
-
 import pygame as p
 from constants import WIDTH, HEIGHT, DIMENSION, SQ_SIZE, IMAGES
 from chess_engine import GameState
@@ -26,12 +24,10 @@ def highlight_squares(screen, gs, valid_moves, sq_selected):
     if sq_selected != ():
         r, c = sq_selected
         if gs.board[r][c][0] == ('w' if gs.white_to_move else 'b'):
-            # Highlight selected square
             s = p.Surface((SQ_SIZE, SQ_SIZE))
-            s.set_alpha(100)  # Transparency
+            s.set_alpha(100)
             s.fill(p.Color('dark green'))
             screen.blit(s, (c * SQ_SIZE, r * SQ_SIZE))
-            # Highlight moves from that square
             s.fill(p.Color('light green'))
             for move in valid_moves:
                 if move.start_row == r and move.start_col == c:

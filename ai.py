@@ -1,5 +1,3 @@
-# ai.py
-
 import random
 import math
 
@@ -38,9 +36,9 @@ def find_move_nega_max_alpha_beta(gs, valid_moves, DEPTH, alpha, beta, turn_mult
 def score_board(gs):
     if gs.checkmate:
         if gs.white_to_move:
-            return -CHECKMATE  # Black wins
+            return -CHECKMATE
         else:
-            return CHECKMATE  # White wins
+            return CHECKMATE
     elif gs.stalemate:
         return STALEMATE
 
